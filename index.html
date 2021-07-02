@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<title>Travel website</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<section>
+		<header>
+			<a href="" class="logo">TRAVEL</a>
+			<div class="toggle" onclick="toggleMenu();"></div>
+		</header>
+		<div class="content">
+			<h2>Dream<br>Trip</h2>
+			
+		</div>
+		<div class="play" onclick="videoToggle();">
+			<img src="play.png"><span>clip.mp4</span>
+
+		</div>
+		<div class="sci">
+			<ul>
+				<li><a href=""><img src="facebook.png"></a></li>
+				<li><a href=""><img src="twitter.png"></a></li>
+				<li><a href=""><img src="instagram.png"></a></li>
+			</ul>
+			
+		</div>
+		<div class="navigation">
+			<ul>
+				<li><a>Home</a></li>
+				<li><a>About</a></li>
+				<li><a>Booking</a></li>
+				<li><a>Tour</a></li>
+				<li><a>Blog</a></li>
+				<li><a>Contact</a></li>
+			</ul>
+			
+		</div>
+	</section>
+
+	<div class="trailer">
+		<video src="clip.mp4" controls="true"></video>
+		<img src="close.png" class="close" onclick="videoToggle();">
+	</div>
+
+	<script type="text/javascript">
+		 
+		 function toggleMenu() {
+		 	
+            const menuToggle= document.querySelector('.toggle');
+            const navigation= document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+
+		 }
+        function videoToggle() {
+		   const trailer= document.querySelector('.trailer');
+		   const video= document.querySelector('.video');
+            trailer.classList.toggle('active');
+            video.currentTime=0;
+            video.pause();
+
+		 }
+
+
+	</script>
+
+</body>
+
+</html>
